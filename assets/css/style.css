@@ -275,6 +275,9 @@ form {
   position: absolute;
   bottom: -25px;
 }
+.header-box{
+  height: 100px;
+}
 /* Responsive design */
 @media (max-width: 990px) {
   .auth-container {
