@@ -16,12 +16,14 @@ body {
   position: relative;
   max-width: 1280px;
   /* Background Image */
-  background-image: url('../images/login page3.png');
+  background-image: url('../images/login page new.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.auth-container.register{
+  background-image: url('../images/register page.png') !important;
+}
 /* Red card */
 .auth-box {
   width: 100%;
